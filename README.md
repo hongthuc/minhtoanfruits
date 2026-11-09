@@ -411,36 +411,163 @@
         <div class="relative w-[280px] max-w-[82vw] h-full bg-white shadow-2xl flex flex-col justify-between overflow-y-auto">
             <div>
                 <div class="p-3.5 bg-brand-700 text-white flex items-center justify-between">
-                    <!-- Thiết kế Banner ĐIỆN THOẠI Slide 1 (Khác với máy tính, kích thước cố định 190px bằng nhau, chữ nhỏ gọn nằm hết trong ảnh banner) -->
-                    <div class="flex md:hidden flex-col justify-between w-full h-[190px] bg-gradient-to-br from-[#0f3814] via-[#1b5e20] to-[#2e7d32] p-3 overflow-hidden relative">
-                        <div class="flex items-center justify-between gap-2">
-                            <span class="inline-block bg-amber-400 text-gray-900 text-[9px] font-extrabold px-2 py-0.5 rounded uppercase tracking-tight">
-                                minhtoanfruits.com • Đà Nẵng
-                            </span>
-                            <span class="text-[9.5px] text-amber-300 font-bold">
-                                <i class="fa-solid fa-phone mr-0.5"></i>0898.174.555
-                            </span>
+                    <div class="flex items-center gap-2">
+                        <img src="https://lh3.googleusercontent.com/d/1HUb6hZaAXaya3UGQqJ3pzdpZgullR6n5"
+                             onerror="this.src='https://drive.google.com/thumbnail?id=1HUb6hZaAXaya3UGQqJ3pzdpZgullR6n5&sz=w200'"
+                             alt="Logo Minh Toàn Fruits"
+                             class="w-8 h-8 rounded-full bg-white p-0.5 object-contain shrink-0">
+                        <span class="font-bold text-xs tracking-wide uppercase">Danh Mục Sản Phẩm</span>
+                    </div>
+                    <button onclick="toggleMobileMenu()" class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+
+                <ul class="divide-y divide-gray-100 text-xs font-semibold text-gray-700">
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('all'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-house text-brand-600 w-5"></i>Trang chủ</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('Trái cây nhập khẩu'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-apple-whole text-brand-600 w-5"></i>Trái cây nhập khẩu</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('Giỏ quà tặng trái cây'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-gift text-brand-600 w-5"></i>Giỏ quà tặng trái cây</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('Khay - Hộp trái cây biếu tặng'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-box-open text-brand-600 w-5"></i>Khay - Hộp trái cây biếu tặng</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('Mâm trái cây đi lễ - thắp hương'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-spa text-brand-600 w-5"></i>Mâm trái cây đi lễ - thắp hương</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('Trái cây Việt Nam'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-leaf text-brand-600 w-5"></i>Trái cây Việt Nam</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#san-pham-trang-chu" onclick="filterCategory('Thực phẩm đồ khô'); toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-seedling text-brand-600 w-5"></i>Thực phẩm đồ khô</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#form-bao-gia" onclick="toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-file-invoice-dollar text-brand-600 w-5"></i>Yêu cầu & Báo giá</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bai-viet-trang-chu" onclick="toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-newspaper text-brand-600 w-5"></i>Tin tức & Blog</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#lien-he-bando" onclick="toggleMobileMenu();" class="flex items-center justify-between px-4 py-3 hover:bg-brand-50 hover:text-brand-700">
+                            <span><i class="fa-solid fa-map-location-dot text-brand-600 w-5"></i>Bản đồ & Fanpage</span>
+                            <i class="fa-solid fa-angle-right text-[10px] text-gray-400"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-brand-50 border-t border-brand-100 text-xs space-y-1.5">
+                <p class="font-bold text-brand-700">MINH TOÀN FRUITS ĐÀ NẴNG</p>
+                <p class="text-gray-600 text-[11px]"><i class="fa-solid fa-location-dot text-brand-600 mr-1"></i>25 Cẩm Bắc 3, P. Cẩm Lệ, TP Đà Nẵng</p>
+                <p class="text-gray-600 text-[11px]"><i class="fa-solid fa-phone text-brand-600 mr-1"></i>Hotline/Zalo: <strong>0898.174.555</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 2 ẢNH BANNER TỰ TRƯỢT CHUYÊN NGHIỆP KÍCH THƯỚC BẰNG NHAU (THIẾT KẾ RIÊNG CHO ĐIỆN THOẠI & MÁY TÍNH) ==================== -->
+    <section class="pt-3 pb-1">
+        <div class="container-1500">
+            <div class="relative w-full rounded-xl overflow-hidden shadow-sm border border-brand-100 bg-brand-800">
+
+                <!-- SLIDE 1 -->
+                <div class="banner-slide block transition-opacity duration-500" data-slide="0">
+                    <!-- Thiết kế Banner MÁY TÍNH Slide 1 (Kích thước cố định 340px bằng Slide 2, chữ nhỏ gọn nằm hết trong ảnh banner) -->
+                    <div class="hidden md:grid md:grid-cols-12 items-center w-full h-[340px] bg-gradient-to-r from-[#0f3814] via-[#1b5e20] to-[#2e7d32] px-10 lg:px-14 overflow-hidden">
+                        <div class="col-span-7 text-white pr-6 space-y-2.5">
+                            <p class="text-xs font-bold text-amber-300 uppercase tracking-wider">
+                                MINH TOÀN FRUITS • MINHTOANFRUITS.COM
+                            </p>
+                            <h2 class="text-xl lg:text-2xl xl:text-[26px] font-extrabold leading-snug text-white">
+                                HỆ THỐNG TRÁI CÂY NHẬP KHẨU CAO CẤP<br>
+                                <span class="text-amber-300">TƯƠI NGON CHUẨN VỊ MỖI NGÀY TẠI ĐÀ NẴNG</span>
+                            </h2>
+                            <p class="text-xs lg:text-[13px] text-emerald-100 max-w-xl leading-relaxed">
+                                Chuyên Táo Envy, Nho Xanh Autumn Crisp, Kiwi Vàng New Zealand, Cherry Mỹ - Úc chính ngạch. Kiểm hàng trước khi thanh toán, đổi trả miễn phí trong 24h.
+                            </p>
+                            <div class="pt-1 flex flex-wrap items-center gap-3 text-xs">
+                                <a href="#san-pham-trang-chu" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold px-4 py-2 rounded-lg shadow transition">
+                                    Xem Sản Phẩm Ngay
+                                </a>
+                                <span class="text-emerald-100 font-medium">
+                                    <i class="fa-solid fa-location-dot text-amber-300 mr-1"></i>25 Cẩm Bắc 3, P. Cẩm Lệ, TP Đà Nẵng • <strong>0898.174.555</strong>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-span-5 flex items-center justify-center h-full py-4">
+                            <div class="grid grid-cols-2 gap-3 w-full max-w-[380px]">
+                                <div class="bg-white/10 p-1.5 rounded-xl border border-white/20">
+                                    <img src="https://lh3.googleusercontent.com/d/16P4rEt1vWRGymUAootgPVCXsBp9Z5Hpf"
+                                         onerror="this.src='https://drive.google.com/thumbnail?id=16P4rEt1vWRGymUAootgPVCXsBp9Z5Hpf&sz=w600'"
+                                         alt="Trái cây nhập khẩu Minh Toàn Fruits"
+                                         class="w-full h-36 object-cover rounded-lg">
+                                </div>
+                                <div class="bg-white/10 p-1.5 rounded-xl border border-white/20">
+                                    <img src="https://lh3.googleusercontent.com/d/1sHHHynvsNNv0I76lbbVV2KGTViEBwU3h"
+                                         onerror="this.src='https://drive.google.com/thumbnail?id=1sHHHynvsNNv0I76lbbVV2KGTViEBwU3h&sz=w600'"
+                                         alt="Nho nhập khẩu tươi ngon"
+                                         class="w-full h-36 object-cover rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thiết kế Banner ĐIỆN THOẠI Slide 1 (Thiết kế riêng khác với máy tính, cao cố định 185px bằng Slide 2, chữ nhỏ gọn nằm hết trong ảnh không tràn viền) -->
+                    <div class="flex md:hidden flex-col justify-between w-full h-[185px] bg-gradient-to-br from-[#0f3814] via-[#1b5e20] to-[#2e7d32] px-3 py-2.5 overflow-hidden">
+                        <div class="flex items-center justify-between text-[9.5px] text-amber-300 font-bold border-b border-white/15 pb-1">
+                            <span>MINHTOANFRUITS.COM</span>
+                            <span><i class="fa-solid fa-phone mr-1"></i>0898.174.555</span>
                         </div>
                         <div class="grid grid-cols-12 items-center gap-2 my-auto">
                             <div class="col-span-7 text-white space-y-1 pr-1">
-                                <h2 class="text-[12px] font-extrabold leading-snug text-white">
+                                <h2 class="text-[11.5px] font-extrabold leading-tight text-white">
                                     TRÁI CÂY NHẬP KHẨU TƯƠI NGON CHUẨN VỊ
                                 </h2>
-                                <p class="text-[10px] text-emerald-100 leading-tight">
+                                <p class="text-[9.5px] text-emerald-100 leading-snug">
                                     Táo Envy, Nho Autumn Crisp, Kiwi Zespri, Cherry Mỹ - Úc chính ngạch.
                                 </p>
-                                <p class="text-[9.5px] text-amber-200 font-medium leading-tight">
-                                    ĐC: 25 Cẩm Bắc 3, P. Cẩm Lệ, Đà Nẵng
+                                <p class="text-[9px] text-amber-200 font-semibold leading-tight">
+                                    ĐC: 25 Cẩm Bắc 3, Cẩm Lệ, Đà Nẵng
                                 </p>
                             </div>
-                            <div class="col-span-5 grid grid-cols-2 gap-1.5">
-                                <div class="h-20 rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
+                            <div class="col-span-5 grid grid-cols-2 gap-1">
+                                <div class="h-[74px] rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
                                     <img src="https://lh3.googleusercontent.com/d/16P4rEt1vWRGymUAootgPVCXsBp9Z5Hpf"
                                          onerror="this.src='https://drive.google.com/thumbnail?id=16P4rEt1vWRGymUAootgPVCXsBp9Z5Hpf&sz=w400'"
                                          alt="Trái cây nhập khẩu"
                                          class="w-full h-full object-cover rounded">
                                 </div>
-                                <div class="h-20 rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
+                                <div class="h-[74px] rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
                                     <img src="https://lh3.googleusercontent.com/d/1sHHHynvsNNv0I76lbbVV2KGTViEBwU3h"
                                          onerror="this.src='https://drive.google.com/thumbnail?id=1sHHHynvsNNv0I76lbbVV2KGTViEBwU3h&sz=w400'"
                                          alt="Nho nhập khẩu"
@@ -457,77 +584,72 @@
 
                 <!-- SLIDE 2 -->
                 <div class="banner-slide hidden transition-opacity duration-500" data-slide="1">
-                    <!-- Thiết kế Banner MÁY TÍNH Slide 2 (Cùng kích thước 360px bằng Slide 1, chữ nhỏ gọn nằm trọn bên trong) -->
-                    <div class="hidden md:grid md:grid-cols-12 items-center w-full h-[360px] bg-gradient-to-r from-[#1b4d20] via-[#256629] to-[#143d18] px-10 lg:px-14 overflow-hidden">
+                    <!-- Thiết kế Banner MÁY TÍNH Slide 2 (Kích thước cố định 340px bằng Slide 1, chữ nhỏ gọn nằm trọn bên trong) -->
+                    <div class="hidden md:grid md:grid-cols-12 items-center w-full h-[340px] bg-gradient-to-r from-[#1b4d20] via-[#256629] to-[#143d18] px-10 lg:px-14 overflow-hidden">
                         <div class="col-span-7 text-white pr-6 space-y-2.5">
-                            <div class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-300/40 px-3 py-1 rounded-full text-amber-300 text-xs font-semibold">
-                                <i class="fa-solid fa-gift"></i>
-                                <span>GIỎ QUÀ TRÁI CÂY • KHAY QUÀ BIẾU • MÂM QUẢ DÂNG LỄ</span>
-                            </div>
-                            <h2 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
+                            <p class="text-xs font-bold text-amber-300 uppercase tracking-wider">
+                                GIỎ QUÀ TRÁI CÂY • KHAY QUÀ BIẾU • MÂM QUẢ DÂNG LỄ
+                            </p>
+                            <h2 class="text-xl lg:text-2xl xl:text-[26px] font-extrabold leading-snug text-white">
                                 THIẾT KẾ GIỎ QUÀ TRÁI CÂY & HOA TƯƠI<br>
                                 <span class="text-amber-300">SANG TRỌNG - TINH TẾ - ĐẲNG CẤP</span>
                             </h2>
-                            <p class="text-xs lg:text-sm text-emerald-100 max-w-xl leading-relaxed">
-                                Nhận đóng giỏ quà tặng doanh nghiệp, khay quà biếu đối tác, mâm ngũ quả đi lễ - thắp hương theo ngân sách yêu cầu. Miễn phí thiệp chúc & biển tên sang trọng.
+                            <p class="text-xs lg:text-[13px] text-emerald-100 max-w-xl leading-relaxed">
+                                Nhận đóng giỏ quà tặng doanh nghiệp, khay quà biếu đối tác, mâm ngũ quả đi lễ - thắp hương theo ngân sách từ 200k - 2 triệu. Miễn phí thiệp chúc & biển tên.
                             </p>
                             <div class="pt-1 flex flex-wrap items-center gap-3 text-xs">
                                 <a href="#form-bao-gia" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold px-4 py-2 rounded-lg shadow transition">
                                     Đặt Giỏ Quà Theo Yêu Cầu
                                 </a>
                                 <span class="text-emerald-100 font-medium">
-                                    <i class="fa-solid fa-truck-fast text-amber-300 mr-1"></i>Giao hàng siêu tốc Đà Nẵng • <strong>0898.174.555</strong>
+                                    <i class="fa-solid fa-truck-fast text-amber-300 mr-1"></i>Giao nhanh tại Đà Nẵng • <strong>0898.174.555</strong>
                                 </span>
                             </div>
                         </div>
-                        <div class="col-span-5 flex items-center justify-center h-full py-5">
-                            <div class="grid grid-cols-2 gap-3 w-full max-w-[390px]">
-                                <div class="bg-white/10 p-2 rounded-xl backdrop-blur-xs border border-white/20">
+                        <div class="col-span-5 flex items-center justify-center h-full py-4">
+                            <div class="grid grid-cols-2 gap-3 w-full max-w-[380px]">
+                                <div class="bg-white/10 p-1.5 rounded-xl border border-white/20">
                                     <img src="https://lh3.googleusercontent.com/d/1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY"
                                          onerror="this.src='https://drive.google.com/thumbnail?id=1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY&sz=w600'"
                                          alt="Giỏ quà trái cây cao cấp"
-                                         class="w-full h-32 object-cover rounded-lg">
+                                         class="w-full h-36 object-cover rounded-lg">
                                 </div>
-                                <div class="bg-white/10 p-2 rounded-xl backdrop-blur-xs border border-white/20">
+                                <div class="bg-white/10 p-1.5 rounded-xl border border-white/20">
                                     <img src="https://lh3.googleusercontent.com/d/1-ogygf0fWyqHatKILLe94RlkIuNgo9BN"
                                          onerror="this.src='https://drive.google.com/thumbnail?id=1-ogygf0fWyqHatKILLe94RlkIuNgo9BN&sz=w600'"
                                          alt="Mâm quả trái cây đi lễ"
-                                         class="w-full h-32 object-cover rounded-lg">
+                                         class="w-full h-36 object-cover rounded-lg">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Thiết kế Banner ĐIỆN THOẠI Slide 2 (Khác với máy tính, kích thước cố định 190px bằng Slide 1, chữ nhỏ gọn không tràn viền) -->
-                    <div class="flex md:hidden flex-col justify-between w-full h-[190px] bg-gradient-to-br from-[#194a1e] via-[#256629] to-[#113814] p-3 overflow-hidden relative">
-                        <div class="flex items-center justify-between gap-2">
-                            <span class="inline-block bg-amber-400 text-gray-900 text-[9px] font-extrabold px-2 py-0.5 rounded uppercase tracking-tight">
-                                Giỏ Quà & Mâm Quả Đi Lễ
-                            </span>
-                            <span class="text-[9.5px] text-amber-300 font-bold">
-                                <i class="fa-solid fa-gift mr-0.5"></i>Tặng kèm thiệp & nơ
-                            </span>
+                    <!-- Thiết kế Banner ĐIỆN THOẠI Slide 2 (Thiết kế riêng khác với máy tính, cao cố định 185px bằng Slide 1, chữ nhỏ gọn nằm hết trong ảnh không tràn viền) -->
+                    <div class="flex md:hidden flex-col justify-between w-full h-[185px] bg-gradient-to-br from-[#194a1e] via-[#256629] to-[#113814] px-3 py-2.5 overflow-hidden">
+                        <div class="flex items-center justify-between text-[9.5px] text-amber-300 font-bold border-b border-white/15 pb-1">
+                            <span>GIỎ QUÀ & MÂM QUẢ ĐI LỄ</span>
+                            <span><i class="fa-solid fa-gift mr-1"></i>Tặng kèm thiệp & nơ</span>
                         </div>
                         <div class="grid grid-cols-12 items-center gap-2 my-auto">
                             <div class="col-span-7 text-white space-y-1 pr-1">
-                                <h2 class="text-[12px] font-extrabold leading-snug text-white">
-                                    GIỎ QUÀ TRÁI CÂY & KHAY BIẾU TẶNG CAO CẤP
+                                <h2 class="text-[11.5px] font-extrabold leading-tight text-white">
+                                    GIỎ QUÀ TRÁI CÂY & KHAY BIẾU TẶNG SANG TRỌNG
                                 </h2>
-                                <p class="text-[10px] text-emerald-100 leading-tight">
+                                <p class="text-[9.5px] text-emerald-100 leading-snug">
                                     Thiết kế theo ngân sách từ 200k - 2 triệu. Giao tận nơi tại Đà Nẵng.
                                 </p>
-                                <p class="text-[9.5px] text-amber-200 font-medium leading-tight">
+                                <p class="text-[9px] text-amber-200 font-semibold leading-tight">
                                     Hotline/Zalo: 0898.174.555
                                 </p>
                             </div>
-                            <div class="col-span-5 grid grid-cols-2 gap-1.5">
-                                <div class="h-20 rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
+                            <div class="col-span-5 grid grid-cols-2 gap-1">
+                                <div class="h-[74px] rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
                                     <img src="https://lh3.googleusercontent.com/d/13ylXJDG3Lj7_GXA-kQkgt0xwfS4MDvrh"
                                          onerror="this.src='https://drive.google.com/thumbnail?id=13ylXJDG3Lj7_GXA-kQkgt0xwfS4MDvrh&sz=w400'"
                                          alt="Giỏ quà trái cây 1"
                                          class="w-full h-full object-cover rounded">
                                 </div>
-                                <div class="h-20 rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
+                                <div class="h-[74px] rounded-lg overflow-hidden border border-amber-300/70 bg-white p-0.5">
                                     <img src="https://lh3.googleusercontent.com/d/1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY"
                                          onerror="this.src='https://drive.google.com/thumbnail?id=1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY&sz=w400'"
                                          alt="Giỏ quà trái cây 2"
@@ -542,84 +664,14 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 2 -->
-                <div class="banner-slide hidden transition-opacity duration-500" data-slide="1">
-                    <!-- Thiết kế Banner MÁY TÍNH Slide 2 (Cùng kích thước 360px bằng Slide 1, chữ nhỏ gọn nằm trọn bên trong) -->
-                    <div class="hidden md:grid md:grid-cols-12 items-center w-full h-[360px] bg-gradient-to-r from-[#1b4d20] via-[#256629] to-[#143d18] px-10 lg:px-14 overflow-hidden">
-                        <div class="col-span-7 text-white pr-6 space-y-2.5">
-                            <div class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-300/40 px-3 py-1 rounded-full text-amber-300 text-xs font-semibold">
-                                <i class="fa-solid fa-gift"></i>
-                                <span>GIỎ QUÀ TRÁI CÂY • KHAY QUÀ BIẾU • MÂM QUẢ DÂNG LỄ</span>
-                            </div>
-                            <h2 class="text-xl lg:text-2xl xl:text-3xl font-extrabold leading-snug text-white">
-                                THIẾT KẾ GIỎ QUÀ TRÁI CÂY & HOA TƯƠI<br>
-                                <span class="text-amber-300">SANG TRỌNG - TINH TẾ - ĐẲNG CẤP</span>
-                            </h2>
-                            <p class="text-xs lg:text-sm text-emerald-100 max-w-xl leading-relaxed">
-                                Nhận đóng giỏ quà tặng doanh nghiệp, khay quà biếu đối tác, mâm ngũ quả đi lễ - thắp hương theo ngân sách yêu cầu. Miễn phí thiệp chúc & biển tên sang trọng.
-                            </p>
-                            <div class="pt-1 flex flex-wrap items-center gap-3 text-xs">
-                                <a href="#form-bao-gia" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold px-4 py-2 rounded-lg shadow transition">
-                                    Đặt Giỏ Quà Theo Yêu Cầu
-                                </a>
-                                <span class="text-emerald-100 font-medium">
-                                    <i class="fa-solid fa-truck-fast text-amber-300 mr-1"></i>Giao hàng siêu tốc Đà Nẵng • <strong>0898.174.555</strong>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-span-5 flex items-center justify-center h-full py-5">
-                            <div class="grid grid-cols-2 gap-3 w-full max-w-[390px]">
-                                <div class="bg-white/10 p-2 rounded-xl backdrop-blur-xs border border-white/20">
-                                    <img src="https://lh3.googleusercontent.com/d/1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY"
-                                         onerror="this.src='https://drive.google.com/thumbnail?id=1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY&sz=w600'"
-                                         alt="Giỏ quà trái cây cao cấp"
-                                         class="w-full h-32 object-cover rounded-lg">
-                                </div>
-                                <div class="bg-white/10 p-2 rounded-xl backdrop-blur-xs border border-white/20">
-                                    <img src="https://lh3.googleusercontent.com/d/1-ogygf0fWyqHatKILLe94RlkIuNgo9BN"
-                                         onerror="this.src='https://drive.google.com/thumbnail?id=1-ogygf0fWyqHatKILLe94RlkIuNgo9BN&sz=w600'"
-                                         alt="Mâm quả trái cây đi lễ"
-                                         class="w-full h-32 object-cover rounded-lg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Thiết kế Banner ĐIỆN THOẠI Slide 2 (Khác với máy tính, kích thước cố định 195px bằng Slide 1, chữ nhỏ gọn không tràn viền) -->
-                    <div class="grid md:hidden grid-cols-12 items-center w-full h-[195px] bg-gradient-to-br from-[#194a1e] via-[#256629] to-[#113814] px-3.5 py-3 overflow-hidden">
-                        <div class="col-span-8 pr-2 text-white space-y-1">
-                            <span class="inline-block bg-amber-400 text-gray-900 text-[9.5px] font-bold px-2 py-0.5 rounded">
-                                GIỎ QUÀ & MÂM QUẢ
-                            </span>
-                            <h2 class="text-[13px] sm:text-sm font-extrabold leading-tight text-white">
-                                GIỎ QUÀ TRÁI CÂY & KHAY BIẾU TẶNG SANG TRỌNG
-                            </h2>
-                            <p class="text-[10.5px] text-emerald-100 leading-snug">
-                                Thiết kế theo ngân sách từ 300k - 2 triệu. Tặng kèm thiệp & nơ.
-                            </p>
-                            <p class="text-[10px] text-amber-300 font-semibold pt-0.5">
-                                <i class="fa-solid fa-phone mr-1"></i>Đặt nhanh: 0898.174.555
-                            </p>
-                        </div>
-                        <div class="col-span-4 flex items-center justify-center">
-                            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border-2 border-amber-300/80 shadow-md bg-white p-0.5">
-                                <img src="https://lh3.googleusercontent.com/d/1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY"
-                                     onerror="this.src='https://drive.google.com/thumbnail?id=1HS2o74J4kt-N0Q4RAXHQ6N9kIMDXd9jY&sz=w500'"
-                                     alt="Minh Toàn Fruits Mobile Banner 2"
-                                     class="w-full h-full object-cover rounded-lg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Nút điều hướng & chấm tròn 2 Banner -->
-                <button onclick="changeBanner(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-9 md:h-9 rounded-full bg-black/30 hover:bg-black/55 text-white flex items-center justify-center transition z-10" aria-label="Banner trước">
+                <button onclick="changeBanner(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 rounded-full bg-black/30 hover:bg-black/55 text-white flex items-center justify-center transition z-10" aria-label="Banner trước">
                     <i class="fa-solid fa-chevron-left text-xs"></i>
                 </button>
-                <button onclick="changeBanner(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-9 md:h-9 rounded-full bg-black/30 hover:bg-black/55 text-white flex items-center justify-center transition z-10" aria-label="Banner tiếp">
+                <button onclick="changeBanner(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 rounded-full bg-black/30 hover:bg-black/55 text-white flex items-center justify-center transition z-10" aria-label="Banner tiếp">
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
-                <div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+                <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
                     <button onclick="goToBanner(0)" class="banner-dot w-6 h-1.5 rounded-full bg-amber-400 transition-all"></button>
                     <button onclick="goToBanner(1)" class="banner-dot w-2.5 h-1.5 rounded-full bg-white/60 transition-all"></button>
                 </div>
@@ -1446,10 +1498,7 @@
                                  class="w-full h-full object-cover hover:scale-105 transition duration-300">
                         </div>
 
-                        <!-- Thông tin sản phẩm: Tên sản phẩm hiển thị đầy đủ không tràn ra ngoài hoặc thiếu chữ -->
-                        <div class="p-2.5 sm:p-3.5">
-                            <span class="block text-[10px] sm:text-[11px] text-brand-600 font-medium mb-1">
-                    <!-- Thông tin sản phẩm: Tên sản phẩm hiển thị đầy đủ không tràn ra ngoài hoặc thiếu chữ, không để các nhãn dán rối mắt -->
+                        <!-- Thông tin sản phẩm: Tên sản phẩm hiển thị đầy đủ không tràn ra ngoài hoặc thiếu chữ, không để các nhãn dán rối mắt -->
                         <div class="p-2.5 sm:p-3.5">
                             <h3 class="product-title-full text-[12.5px] sm:text-[13.5px] font-bold text-gray-800 hover:text-brand-600 transition">
                                 ${product.name}
